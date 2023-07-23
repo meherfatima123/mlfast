@@ -8,5 +8,5 @@ testpaths = [
     ]
 
 [tool.mypy]
-mypy_path = "easyml"
+mypy_path = "mlfast"
 ignore_missing_imports = true
