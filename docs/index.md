@@ -118,10 +118,10 @@ Regression(X, y, model = 'ada',scaler = 'standard', cat=True)
 ```
 
 
-**XGBoost Regressor**  -> 'xbg' 
+**XGBoost Regressor**  -> 'xgb' 
 ```python
 
-Regression(X, y, model = 'xbg',scaler = 'standard', cat=True)
+Regression(X, y, model = 'xgb',scaler = 'standard', cat=True)
 
 ```
 
@@ -197,12 +197,268 @@ Classification(X, y, model = 'ada',scaler = 'standard', cat=True)
 ```
 
 
-**XGBoost Classifier**  -> 'xbg'
+**XGBoost Classifier**  -> 'xgb'
 
 ```python
 
-Classification(X, y, model = 'xbg',scaler = 'standard', cat=True)
+Classification(X, y, model = 'xgb',scaler = 'standard', cat=True)
 ```
+
+
+
+
+
+
+### Regression hyperparameter
+
+```
+from mlfast.Hyperparameter import Regression
+```
+
+
+**Ridge regression**
+
+Ridge regression
+
+
+hyperparams_ridge = {
+    "alpha": [0.01, 0.1, 1.0, 10.0],
+    "fit_intercept": [True, False],
+    "solver": ["auto", "svd", "cholesky", "lsqr", "sparse_cg", "sag", "saga"],
+}
+
+Regression(X, y, model="ridge", scaler="standard", hyperparams=hyperparams_ridge)
+
+
+
+
+
+**Lasso Regression**
+
+```
+hyperparams_lasso = {
+    "alpha": [0.01, 0.1, 1.0, 10.0],
+}
+Regression(X, y, model="lasso", scaler="standard", hyperparams=hyperparams_lasso, save_pkl=False)
+```
+
+
+**ElasticNet Regression**
+
+```
+hyperparams_enet = {
+    "alpha": [0.01, 0.1, 1.0, 10.0],
+    "l1_ratio": [0.25, 0.5, 0.75],
+}
+Regression(X, y, model="enet", scaler="standard", hyperparams=hyperparams_enet, save_pkl=False)
+```
+
+
+**Decision Tree Regression**
+
+```
+hyperparams_dt = {
+    "max_depth": [None, 5, 10, 20],
+    "min_samples_split": [2, 5, 10],
+}
+Regression(X, y, model="dt", scaler="standard",  hyperparams=hyperparams_dt, save_pkl=False)
+```
+
+
+**Random Forest Regression**
+
+```
+hyperparams_rf = {
+    "n_estimators": [5, 10, 20],
+    "max_depth": [None, 5, 10, 20],
+    "min_samples_split": [2, 5, 10],
+}
+Regression(X, y, model="rf", scaler="standard",  hyperparams=hyperparams_rf, save_pkl=False)
+```
+
+
+**Support Vector Regression (SVR)**
+
+```
+hyperparams_svm = {
+    "C": [0.1, 1.0, 10.0],
+    "kernel": ["linear", "rbf", "poly"],
+}
+Regression(X, y, model="svm", scaler="standard",  hyperparams=hyperparams_svm, save_pkl=False)
+```
+
+
+**K-Nearest Neighbors Regression (KNN)**
+
+```
+hyperparams_knn = {
+    "n_neighbors": [2, 3, 5],
+    "weights": ["uniform", "distance"],
+}
+Regression(X, y, model="knn", scaler="standard",  hyperparams=hyperparams_knn, save_pkl=False)
+```
+
+
+**Gradient Boosting Regression**
+
+```
+hyperparams_gb = {
+    "n_estimators": [5, 10, 20],
+    "learning_rate": [0.01, 0.1, 0.2],
+}
+Regression(X, y, model="gb", scaler="standard", hyperparams=hyperparams_gb, save_pkl=False)
+```
+
+
+**AdaBoost Regression**
+
+```
+hyperparams_ada = {
+    "n_estimators": [5, 10, 20],
+    "learning_rate": [0.01, 0.1, 0.2],
+}
+Regression(X, y, model="ada", scaler="standard",  hyperparams=hyperparams_ada, save_pkl=False)
+```
+
+**XGBoost Regression**
+
+```
+hyperparams_xgb = {
+    "n_estimators": [5, 10, 20],
+    "learning_rate": [0.01, 0.1, 0.2],
+}
+Regression(X, y, model="xgb", scaler="standard",  hyperparams=hyperparams_xgb, save_pkl=False)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Classification Hyperparameter 
+
+
+```
+from mlfast.Hyperparameter import Classification
+```
+
+
+
+
+**Logistic Regression**
+
+```
+hyperparams_lr = {
+    "C": [0.1, 1.0],
+}
+Classification(X, y, model="lr", scaler="robust", hyperparams=hyperparams_lr, save_pkl=True)
+```
+
+**Decision Tree Classifier**
+
+```
+hyperparams_dt = {
+    "max_depth": [None, 5, 10, 20],
+    "min_samples_split": [2, 5, 10],
+}
+Classification(X, y, model="dt", scaler="standard", hyperparams=hyperparams_dt)
+```
+
+
+**Random Forest Classifier**
+
+```
+rf_hyperparams = {
+    "n_estimators": [100, 200, 300],
+    "max_depth": [None, 10, 20, 30],
+    "min_samples_split": [2, 5, 10],
+    "min_samples_leaf": [1, 2, 4],
+    "bootstrap": [True, False],
+}
+
+Classification(X, y, model="rf", scaler="standard", cat=True, hyperparams=rf_hyperparams, save_pkl=False)
+```
+
+
+**Support Vector Classifier (SVC)**
+
+```
+hyperparams_svm = {
+    "C": [0.1, 1.0, 10.0],
+    "kernel": ["linear", "rbf", "poly"],
+}
+Classification(X, y, model="svm", scaler="standard", hyperparams=hyperparams_svm)
+```
+
+
+**K-Nearest Neighbors Classifier (KNN)**
+
+```
+hyperparams_knn = {
+    "n_neighbors": [3, 5, 10],
+    "weights": ["uniform", "distance"],
+}
+Classification(X, y, model="knn", scaler="standard", hyperparams=hyperparams_knn)
+```
+
+
+
+**Gradient Boosting Classifier**
+
+```
+hyperparams_gb = {
+    "n_estimators": [5, 10, 20],
+    "learning_rate": [0.01, 0.1, 0.2],
+}
+Classification(X, y, model="gb", scaler="standard", hyperparams=hyperparams_gb)
+```
+
+
+
+**AdaBoost Classifier**
+
+```
+hyperparams_ada = {
+    "n_estimators": [5, 10, 20],
+    "learning_rate": [0.01, 0.1, 0.2],
+}
+Classification(X, y, model="ada", scaler="standard", cat=True, hyperparams=hyperparams_ada)
+```
+
+
+**XGBoost Classifier**
+
+```
+hyperparams_xgb = {
+    "n_estimators": [5, 10, 20],
+    "learning_rate": [0.01, 0.1, 0.2],
+}
+Classification(X, y, model="xgb", scaler="standard", hyperparams=hyperparams_xgb)
+```
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -271,14 +527,13 @@ Chatbot(api_key="YOUR-OPENAI-API-KEY",
         role="ENTER-YOUR-CHATBOT-ROLE",
         deploy=True)
 ```
-
+# **Chatbot feature is depreciated will be added soon on different library**
 
 
 
 ## Announcement
 
 - Unsupervised Machine Learning Algorithms
-- Hyperparameter Tuning
 - Bag of words, TFIDF and Word2Vec
 - Image Preprocessing
 - And many more

@@ -8,4 +8,6 @@ numpy
 pandas
 nltk
 emoji==2.2.0
+black==22.3.0
+pylint==2.15.3
 -e .
