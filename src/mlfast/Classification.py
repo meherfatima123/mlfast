@@ -26,7 +26,6 @@ import warnings
 
 warnings.filterwarnings("ignore")
 
-
 def Classification(X, y, model="lr", scaler=None, cat=False):
     import warnings
 
