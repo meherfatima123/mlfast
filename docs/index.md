@@ -211,16 +211,15 @@ Classification(X, y, model = 'xgb',scaler = 'standard', cat=True)
 
 ### Regression hyperparameter
 
-```
+```python
 from mlfast.Hyperparameter import Regression
 ```
 
 
 **Ridge regression**
 
-Ridge regression
 
-
+```python
 hyperparams_ridge = {
     "alpha": [0.01, 0.1, 1.0, 10.0],
     "fit_intercept": [True, False],
@@ -228,14 +227,14 @@ hyperparams_ridge = {
 }
 
 Regression(X, y, model="ridge", scaler="standard", hyperparams=hyperparams_ridge)
-
+```
 
 
 
 
 **Lasso Regression**
 
-```
+```python
 hyperparams_lasso = {
     "alpha": [0.01, 0.1, 1.0, 10.0],
 }
@@ -245,7 +244,7 @@ Regression(X, y, model="lasso", scaler="standard", hyperparams=hyperparams_lasso
 
 **ElasticNet Regression**
 
-```
+```python
 hyperparams_enet = {
     "alpha": [0.01, 0.1, 1.0, 10.0],
     "l1_ratio": [0.25, 0.5, 0.75],
@@ -256,7 +255,7 @@ Regression(X, y, model="enet", scaler="standard", hyperparams=hyperparams_enet, 
 
 **Decision Tree Regression**
 
-```
+```python
 hyperparams_dt = {
     "max_depth": [None, 5, 10, 20],
     "min_samples_split": [2, 5, 10],
@@ -267,7 +266,7 @@ Regression(X, y, model="dt", scaler="standard",  hyperparams=hyperparams_dt, sav
 
 **Random Forest Regression**
 
-```
+```python
 hyperparams_rf = {
     "n_estimators": [5, 10, 20],
     "max_depth": [None, 5, 10, 20],
@@ -279,7 +278,7 @@ Regression(X, y, model="rf", scaler="standard",  hyperparams=hyperparams_rf, sav
 
 **Support Vector Regression (SVR)**
 
-```
+```python
 hyperparams_svm = {
     "C": [0.1, 1.0, 10.0],
     "kernel": ["linear", "rbf", "poly"],
@@ -290,7 +289,7 @@ Regression(X, y, model="svm", scaler="standard",  hyperparams=hyperparams_svm, s
 
 **K-Nearest Neighbors Regression (KNN)**
 
-```
+```python
 hyperparams_knn = {
     "n_neighbors": [2, 3, 5],
     "weights": ["uniform", "distance"],
@@ -301,7 +300,7 @@ Regression(X, y, model="knn", scaler="standard",  hyperparams=hyperparams_knn, s
 
 **Gradient Boosting Regression**
 
-```
+```python
 hyperparams_gb = {
     "n_estimators": [5, 10, 20],
     "learning_rate": [0.01, 0.1, 0.2],
@@ -312,7 +311,7 @@ Regression(X, y, model="gb", scaler="standard", hyperparams=hyperparams_gb, save
 
 **AdaBoost Regression**
 
-```
+```python
 hyperparams_ada = {
     "n_estimators": [5, 10, 20],
     "learning_rate": [0.01, 0.1, 0.2],
@@ -322,7 +321,7 @@ Regression(X, y, model="ada", scaler="standard",  hyperparams=hyperparams_ada, s
 
 **XGBoost Regression**
 
-```
+```python
 hyperparams_xgb = {
     "n_estimators": [5, 10, 20],
     "learning_rate": [0.01, 0.1, 0.2],
@@ -352,7 +351,7 @@ Regression(X, y, model="xgb", scaler="standard",  hyperparams=hyperparams_xgb, s
 ### Classification Hyperparameter 
 
 
-```
+```python
 from mlfast.Hyperparameter import Classification
 ```
 
@@ -361,7 +360,7 @@ from mlfast.Hyperparameter import Classification
 
 **Logistic Regression**
 
-```
+```python
 hyperparams_lr = {
     "C": [0.1, 1.0],
 }
@@ -370,7 +369,7 @@ Classification(X, y, model="lr", scaler="robust", hyperparams=hyperparams_lr, sa
 
 **Decision Tree Classifier**
 
-```
+```python
 hyperparams_dt = {
     "max_depth": [None, 5, 10, 20],
     "min_samples_split": [2, 5, 10],
@@ -381,7 +380,7 @@ Classification(X, y, model="dt", scaler="standard", hyperparams=hyperparams_dt)
 
 **Random Forest Classifier**
 
-```
+```python
 rf_hyperparams = {
     "n_estimators": [100, 200, 300],
     "max_depth": [None, 10, 20, 30],
@@ -396,7 +395,7 @@ Classification(X, y, model="rf", scaler="standard", cat=True, hyperparams=rf_hyp
 
 **Support Vector Classifier (SVC)**
 
-```
+```python
 hyperparams_svm = {
     "C": [0.1, 1.0, 10.0],
     "kernel": ["linear", "rbf", "poly"],
@@ -407,7 +406,7 @@ Classification(X, y, model="svm", scaler="standard", hyperparams=hyperparams_svm
 
 **K-Nearest Neighbors Classifier (KNN)**
 
-```
+```python
 hyperparams_knn = {
     "n_neighbors": [3, 5, 10],
     "weights": ["uniform", "distance"],
@@ -419,7 +418,7 @@ Classification(X, y, model="knn", scaler="standard", hyperparams=hyperparams_knn
 
 **Gradient Boosting Classifier**
 
-```
+```python
 hyperparams_gb = {
     "n_estimators": [5, 10, 20],
     "learning_rate": [0.01, 0.1, 0.2],
@@ -431,7 +430,7 @@ Classification(X, y, model="gb", scaler="standard", hyperparams=hyperparams_gb)
 
 **AdaBoost Classifier**
 
-```
+```python
 hyperparams_ada = {
     "n_estimators": [5, 10, 20],
     "learning_rate": [0.01, 0.1, 0.2],
@@ -442,7 +441,7 @@ Classification(X, y, model="ada", scaler="standard", cat=True, hyperparams=hyper
 
 **XGBoost Classifier**
 
-```
+```python
 hyperparams_xgb = {
     "n_estimators": [5, 10, 20],
     "learning_rate": [0.01, 0.1, 0.2],
