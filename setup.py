@@ -48,7 +48,7 @@ import os
 here = os.path.abspath(os.path.dirname(__file__))
 
 # Define the path to your README file, assuming it's named README1.md
-readme_path = os.path.join(here, "README1.md")
+readme_path = os.path.join(here, "README.md")
 
 # Check if the README file exists
 if os.path.isfile(readme_path):
