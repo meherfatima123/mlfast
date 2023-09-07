@@ -21,11 +21,14 @@ This Python machine learning package is built on top of scikit-learn and provide
 
 ### Installations
 
-!!! note "Installation steps"
-    First let's do an easy pip installation of the library by running the following command -
-    ```python
-    pip install mlfast
-    ```
+**note "Installation steps"**
+
+**First let's do an easy pip installation of the library by running the following command -**
+
+
+```python
+pip install mlfast
+```
 
 ## Usage
 
@@ -132,12 +135,14 @@ Regression(X, y, model = 'xgb',scaler = 'standard', cat=True)
 ### Classification Algorithms
 
 
-!!! note "For Classification Modeling"
-    Import Classification Model -
-    ```python
-    from mlfast.Hyperparameter.Classification import Classification
-    ```
+**note "For Classification Modeling"**
+**Import Classification Model -**
 
+
+
+```python
+from mlfast.Hyperparameter.Classification import Classification
+```
 
 
 
@@ -212,19 +217,12 @@ Classification(X, y, model = 'xgb',scaler = 'standard', cat=True)
 ### Regression hyperparameter
 
 
-!!! note "For Regression Hyperparameter Modeling"
-    Import Regression Hyperparameter Model -
-    ```python
-    from mlfast.Hyperparameter.Regression import Regression
-    ```
+**note "For Regression Hyperparameter Modeling"**
+**Import Regression Hyperparameter Model -**
 
-
-
-
-
-
-
-
+```python
+from mlfast.Hyperparameter.Regression import Regression
+```
 
 
 **Ridge regression**
@@ -340,34 +338,11 @@ hyperparams_xgb = {
 Regression(X, y, model="xgb", scaler="standard",  hyperparams=hyperparams_xgb, save_pkl=False)
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### Classification Hyperparameter 
 
-
 ```python
-from mlfast.Hyperparameter import Classification
+from mlfast.Hyperparameter.Classification import Classification
 ```
-
-
-
 
 **Logistic Regression**
 
@@ -438,7 +413,6 @@ Classification(X, y, model="gb", scaler="standard", hyperparams=hyperparams_gb)
 ```
 
 
-
 **AdaBoost Classifier**
 
 ```python
@@ -460,20 +434,6 @@ hyperparams_xgb = {
 Classification(X, y, model="xgb", scaler="standard", hyperparams=hyperparams_xgb)
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### Text Preprocessing
 
 
@@ -487,8 +447,6 @@ The provided code snippet applies Text **Preprocessing** to a series or column o
 - `remove_extra_spaces`: Specifies whether extra spaces should be removed. Set to `True` to remove extra spaces, or `False` to keep them.
 
 By setting these flags to either `True` or `False`, you can customize the preprocessing steps according to your requirements. The code applies the specified preprocessing steps to each text element in the series or column and returns the processed text.
-
-
 
 
 **Text preprocessing sample code**
@@ -508,14 +466,9 @@ df['review'].apply(Text_preprocessing,
 
 ```
 
-
-
 ### Chatbot
 
-
-
 Import the `Chatbot` class: In your Python script, import the `Chatbot` class from `mlfast`. You can do this by adding the following line at the beginning of your code:
-
 
 ```python
 from mlfast import Chatbot
@@ -539,15 +492,11 @@ Chatbot(api_key="YOUR-OPENAI-API-KEY",
 ```
 # **Chatbot feature is depreciated will be added soon on different library**
 
-
-
 ## Announcement
 
 - Unsupervised Machine Learning Algorithms
 - Bag of words, TFIDF and Word2Vec
 - Image Preprocessing
 - And many more
-
-
 
 **ADDED SOON**
