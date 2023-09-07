@@ -135,7 +135,7 @@ Regression(X, y, model = 'xgb',scaler = 'standard', cat=True)
 !!! note "For Classification Modeling"
     Import Classification Model -
     ```python
-    from mlfast.Hyperparameter.Classification import Classification
+    from mlfast import Classification
     ```
 
 
@@ -362,9 +362,13 @@ Regression(X, y, model="xgb", scaler="standard",  hyperparams=hyperparams_xgb, s
 ### Classification Hyperparameter 
 
 
-```python
-from mlfast.Hyperparameter import Classification
-```
+
+!!! note "For Classification Modeling"
+    Import Classification Model -
+    ```python
+    from mlfast.Hyperparameter.Classification import Classification
+    ```
+
 
 
 
