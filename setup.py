@@ -59,7 +59,7 @@ else:
     # If the file doesn't exist, you might want to provide a fallback or raise an error.
     long_description = "No README1.md file found."
 
-__version__ = "0.0.16"
+__version__ = "0.0.17"
 
 REPO_NAME = "mlfast"
 AUTHOR_USER_NAME = "Abdul-Jaweed"
