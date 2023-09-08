@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 import codecs
 import os   
 
-# Get   the directory of the current script
+# Get the directory of the current script
 here = os.path.abspath(os.path.dirname(__file__))
 
 # Define the path to your README file, assuming it's named README1.md
